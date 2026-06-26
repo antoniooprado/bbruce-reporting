@@ -23,7 +23,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#FFFFFF;--bg2:#F6F6F5;--bg3:#EEEEEC;--line:#E0E0DE;--line2:#EBEBEA;
+  --bg:#fff;--bg2:#F6F6F5;--line:#E0E0DE;--line2:#EBEBEA;
   --t1:#121211;--t2:#2E2E2C;--mu:#777774;--mu2:#A5A5A2;
   --amber:#BA7517;--amber-bg:#FAEEDA;--amber-bd:#FAC775;
   --teal:#0F6E56;--teal-bg:#E1F5EE;--teal-bd:#9FE1CB;
@@ -32,23 +32,14 @@
   --font:-apple-system,'Inter','Helvetica Neue',sans-serif;
 }
 body{font-family:var(--font);background:var(--bg2);color:var(--t1);font-size:14px;line-height:1.5}
-
-/* NAV */
-nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--line);padding:0 40px;display:flex;align-items:center;height:52px;gap:0}
-.nav-brand{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--t1);margin-right:32px;white-space:nowrap}
-.nav-links{display:flex;gap:0;list-style:none;height:100%}
-.nav-links a{display:flex;align-items:center;height:52px;padding:0 16px;font-size:12px;color:var(--mu);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap}
+nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--line);padding:0 40px;display:flex;align-items:center;height:52px}
+.nav-brand{font-size:13px;font-weight:600;margin-right:32px}
+.nav-links{display:flex;list-style:none;height:100%}
+.nav-links a{display:flex;align-items:center;height:52px;padding:0 14px;font-size:12px;color:var(--mu);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
 .nav-links a:hover{color:var(--t1)}
 .nav-links a.active{color:var(--t1);border-bottom-color:var(--amber)}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:12px}
-.nav-date{font-size:12px;color:var(--mu2)}
-.btn-edit{background:var(--t1);color:#fff;border:none;border-radius:6px;padding:7px 14px;font-size:12px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px;transition:opacity .15s}
-.btn-edit:hover{opacity:.8}
-
-/* MAIN */
+.nav-date{margin-left:auto;font-size:12px;color:var(--mu2)}
 main{max-width:1400px;margin:0 auto;padding:40px 40px 80px;display:flex;flex-direction:column;gap:32px}
-
-/* SECTION */
 .section{background:var(--bg);border-radius:12px;border:1px solid var(--line);overflow:hidden}
 .section-header{padding:28px 32px 20px;border-bottom:1px solid var(--line2);display:flex;align-items:baseline;gap:12px}
 .section-num{font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--mu2);text-transform:uppercase}
@@ -59,8 +50,6 @@ main{max-width:1400px;margin:0 auto;padding:40px 40px 80px;display:flex;flex-dir
 .section-accent-teal{border-top:3px solid var(--teal)}
 .section-accent-purple{border-top:3px solid var(--purple)}
 .section-accent-coral{border-top:3px solid var(--coral)}
-
-/* COVER */
 .cover{background:var(--t1);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:340px 1fr;min-height:280px}
 .cover-left{background:#0A0A09;padding:40px 36px;border-right:1px solid #2A2A28;display:flex;flex-direction:column;justify-content:space-between}
 .cover-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;color:#555;text-transform:uppercase}
@@ -75,21 +64,13 @@ main{max-width:1400px;margin:0 auto;padding:40px 40px 80px;display:flex;flex-dir
 .cover-index-list li.active{color:#E8E8E0}
 .cover-dot{width:6px;height:6px;border-radius:50%;background:#333;flex-shrink:0}
 .cover-dot.active{background:var(--amber-bd)}
-.cover-footer{font-size:12px;color:#444;margin-top:auto;padding-top:24px}
-
-/* BADGE */
+.cover-footer{font-size:12px;color:#444;padding-top:24px}
 .badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500;white-space:nowrap;border:1px solid}
 .badge-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-.badge-meeting{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-bd)}
-.badge-meeting .badge-dot{background:var(--amber)}
-.badge-curso{background:var(--teal-bg);color:var(--teal);border-color:var(--teal-bd)}
-.badge-curso .badge-dot{background:var(--teal)}
-.badge-empezar{background:var(--purp-bg);color:var(--purple);border-color:var(--purp-bd)}
-.badge-empezar .badge-dot{background:var(--purple)}
-.badge-terminado{background:var(--bg2);color:var(--mu);border-color:var(--line)}
-.badge-terminado .badge-dot{background:var(--mu2)}
-
-/* TABLE */
+.badge-meeting{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-bd)}.badge-meeting .badge-dot{background:var(--amber)}
+.badge-curso{background:var(--teal-bg);color:var(--teal);border-color:var(--teal-bd)}.badge-curso .badge-dot{background:var(--teal)}
+.badge-empezar{background:var(--purp-bg);color:var(--purple);border-color:var(--purp-bd)}.badge-empezar .badge-dot{background:var(--purple)}
+.badge-terminado{background:var(--bg2);color:var(--mu);border-color:var(--line)}.badge-terminado .badge-dot{background:var(--mu2)}
 .table-wrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
 thead tr{background:var(--bg2)}
@@ -104,8 +85,6 @@ tbody td{padding:12px 14px;vertical-align:middle}
 .td-next.meeting{color:var(--amber);font-weight:500}
 .td-fecha{color:var(--mu2);font-size:12px;white-space:nowrap}
 .td-fecha.urgent{color:var(--coral);font-weight:600}
-
-/* BILLING */
 .billing-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .billing-card{background:var(--bg2);border-radius:8px;padding:28px;border-left:3px solid var(--line)}
 .billing-card.filled{border-left-color:var(--amber)}
@@ -116,9 +95,7 @@ tbody td{padding:12px 14px;vertical-align:middle}
 .billing-value.empty{color:var(--mu2)}
 .billing-note{font-size:12px;color:var(--mu2);margin-top:12px}
 .billing-alert{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:12px 16px;font-size:13px;color:var(--amber);margin-top:20px}
-
-/* CHART */
-.chart-labels-top{display:flex;justify-content:space-between;font-size:11px;color:var(--mu2);margin-bottom:8px;padding:0 4px}
+.chart-labels-top{display:flex;justify-content:space-between;font-size:11px;color:var(--mu2);margin-bottom:8px}
 .chart-container{position:relative;width:100%;height:360px}
 .chart-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
 .chart-legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}
@@ -127,36 +104,23 @@ tbody td{padding:12px 14px;vertical-align:middle}
 .strip-label{font-size:10px;font-weight:600;letter-spacing:.08em;color:var(--mu2);text-transform:uppercase}
 .strip-value{font-size:15px;font-weight:600;color:var(--amber);margin-top:4px}
 .strip-value.muted{color:var(--mu)}
-
-/* KPIs */
 .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .kpi-card{background:var(--bg2);border-radius:8px;padding:24px;border-top:3px solid;display:flex;flex-direction:column}
-.kpi-card-amber{border-top-color:var(--amber)}
-.kpi-card-teal{border-top-color:var(--teal)}
-.kpi-card-purple{border-top-color:var(--purple)}
+.kpi-card-amber{border-top-color:var(--amber)}.kpi-card-teal{border-top-color:var(--teal)}.kpi-card-purple{border-top-color:var(--purple)}
 .kpi-num{font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--mu2);text-transform:uppercase;margin-bottom:10px}
 .kpi-name{font-size:18px;font-weight:600;color:var(--t1);line-height:1.2;margin-bottom:16px}
 .kpi-divider{height:1px;background:var(--line);margin:0 0 16px}
 .kpi-value{font-size:42px;font-weight:700;line-height:1;margin-bottom:4px}
-.kpi-value-amber{color:var(--amber)}
-.kpi-value-teal{color:var(--teal)}
-.kpi-value-purple{color:var(--purple)}
-.kpi-value-empty{color:var(--mu2)}
+.kpi-value-amber{color:var(--amber)}.kpi-value-teal{color:var(--teal)}.kpi-value-purple{color:var(--purple)}.kpi-value-empty{color:var(--mu2)}
 .kpi-note{font-size:12px;color:var(--mu2);margin-bottom:16px}
 .kpi-divider2{height:1px;background:var(--line2);margin:0 0 12px}
 .kpi-vs-label{font-size:11px;color:var(--mu2)}
 .kpi-vs{font-size:16px;font-weight:600;margin-top:2px;margin-bottom:16px}
-.kpi-vs-up{color:var(--teal)}
-.kpi-vs-down{color:var(--coral)}
-.kpi-vs-muted{color:var(--mu2)}
+.kpi-vs-up{color:var(--teal)}.kpi-vs-down{color:var(--coral)}.kpi-vs-muted{color:var(--mu2)}
 .kpi-def-label{font-size:10px;font-weight:600;letter-spacing:.08em;color:var(--mu2);text-transform:uppercase}
 .kpi-def{font-size:12px;color:var(--mu);margin-top:4px;line-height:1.5;margin-bottom:16px}
 .kpi-obj{font-size:11px;font-weight:500;margin-top:auto;padding-top:8px;border-top:1px solid var(--line2)}
-.kpi-obj-amber{color:var(--amber)}
-.kpi-obj-teal{color:var(--teal)}
-.kpi-obj-purple{color:var(--purple)}
-
-/* PROBLEMS */
+.kpi-obj-amber{color:var(--amber)}.kpi-obj-teal{color:var(--teal)}.kpi-obj-purple{color:var(--purple)}
 .problems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .problem-card{background:var(--bg2);border-radius:8px;border-top:3px solid var(--coral);padding:18px;display:flex;flex-direction:column}
 .problem-num{font-size:11px;font-weight:600;color:var(--coral);margin-bottom:4px}
@@ -166,719 +130,338 @@ tbody td{padding:12px 14px;vertical-align:middle}
 .problem-text{font-size:12px;color:var(--mu);line-height:1.55;margin-bottom:12px}
 .problem-mejora-badge{display:inline-block;background:var(--teal-bg);color:var(--teal);border:1px solid var(--teal-bd);border-radius:12px;font-size:10px;font-weight:500;padding:2px 10px;margin-bottom:6px}
 .problem-mejora{font-size:12px;color:var(--t2);line-height:1.55}
-
-/* LEGEND ROW */
 .legend-row{display:flex;gap:20px;padding:16px 32px;border-top:1px solid var(--line2);background:var(--bg2)}
 .legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}
 .legend-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-
-/* FOOTER */
 footer{text-align:center;font-size:12px;color:var(--mu2);padding:32px 0 0;border-top:1px solid var(--line)}
-
-/* ── EDITOR PANEL ── */
-.editor-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;backdrop-filter:blur(2px)}
-.editor-overlay.open{display:flex;align-items:flex-start;justify-content:flex-end}
-.editor-panel{background:var(--bg);width:680px;height:100vh;overflow-y:auto;box-shadow:-8px 0 32px rgba(0,0,0,.15);display:flex;flex-direction:column}
-.editor-header{padding:24px 28px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--bg);z-index:10}
-.editor-header h2{font-size:16px;font-weight:600}
-.editor-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--mu);padding:4px 8px;border-radius:4px}
-.editor-close:hover{background:var(--bg2)}
-.editor-tabs{display:flex;border-bottom:1px solid var(--line);padding:0 28px;background:var(--bg);position:sticky;top:73px;z-index:10}
-.editor-tab{padding:12px 16px;font-size:12px;font-weight:500;color:var(--mu);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
-.editor-tab.active{color:var(--t1);border-bottom-color:var(--amber)}
-.editor-body{padding:24px 28px;flex:1}
-.editor-section{display:none}
-.editor-section.active{display:block}
-
-/* EDITOR FORM ELEMENTS */
-.editor-row{margin-bottom:20px;background:var(--bg2);border-radius:8px;padding:16px;border:1px solid var(--line2);position:relative}
-.editor-row-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.editor-row-title{font-size:12px;font-weight:600;color:var(--t1)}
-.btn-delete-row{background:none;border:none;color:var(--mu2);cursor:pointer;font-size:14px;padding:2px 6px;border-radius:4px}
-.btn-delete-row:hover{background:var(--coral-bg);color:var(--coral)}
-.field-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
-.field-group.full{grid-template-columns:1fr}
-label{display:block;font-size:10px;font-weight:600;letter-spacing:.07em;color:var(--mu2);text-transform:uppercase;margin-bottom:4px}
-input[type=text],select,textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;font-size:13px;font-family:var(--font);color:var(--t1);background:var(--bg);transition:border-color .15s}
-input[type=text]:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber)}
-textarea{resize:vertical;min-height:70px;line-height:1.5}
-.btn-add-row{width:100%;padding:10px;border:1.5px dashed var(--line);border-radius:8px;background:none;color:var(--mu);font-size:13px;cursor:pointer;margin-top:8px;transition:all .15s}
-.btn-add-row:hover{border-color:var(--amber);color:var(--amber);background:var(--amber-bg)}
-
-/* EDITOR FOOTER */
-.editor-footer{padding:20px 28px;border-top:1px solid var(--line);position:sticky;bottom:0;background:var(--bg);display:flex;gap:10px;align-items:center}
-.btn-publish{flex:1;background:var(--t1);color:#fff;border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .15s}
-.btn-publish:hover{opacity:.8}
-.btn-publish:disabled{opacity:.4;cursor:not-allowed}
-.publish-status{font-size:12px;color:var(--mu)}
-.publish-status.success{color:var(--teal)}
-.publish-status.error{color:var(--coral)}
 </style>
 </head>
 <body>
-
 <nav>
-  <span class="nav-brand">B—BRUCE</span>
+  <span class="nav-brand">B&#8212;BRUCE</span>
   <ul class="nav-links">
     <li><a href="#proyectos" class="active">Proyectos</a></li>
-    <li><a href="#facturacion">Facturación</a></li>
-    <li><a href="#grafico-agencia">Gráfico agencia</a></li>
-    <li><a href="#grafico-db">Gráfico DB</a></li>
+    <li><a href="#facturacion">Facturaci&#243;n</a></li>
+    <li><a href="#grafico-agencia">Gr&#225;fico agencia</a></li>
+    <li><a href="#grafico-db">Gr&#225;fico DB</a></li>
     <li><a href="#kpis">KPIs</a></li>
     <li><a href="#problemas">Problemas</a></li>
     <li><a href="#peticiones">Peticiones</a></li>
   </ul>
-  <div class="nav-right">
-    <span class="nav-date" id="nav-date">Junio 2026 · Dynamic Branding</span>
-    <button class="btn-edit" onclick="openEditor()">✏️ Editar reporting</button>
-  </div>
+  <span class="nav-date">Junio 2026 &middot; Dynamic Branding</span>
 </nav>
+<main>
 
-<main id="main-content">
-  <!-- rendered by JS -->
-</main>
-
-<!-- EDITOR PANEL -->
-<div class="editor-overlay" id="editor-overlay" onclick="handleOverlayClick(event)">
-  <div class="editor-panel" onclick="event.stopPropagation()">
-    <div class="editor-header">
-      <h2>Editar reporting</h2>
-      <button class="editor-close" onclick="closeEditor()">✕</button>
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-left">
+    <div>
+      <div class="cover-eyebrow">DYNAMIC BRANDING</div>
+      <div class="cover-title">Reporting<br>Mensual</div>
+      <div class="cover-month">Junio 2026</div>
+      <div class="cover-divider"></div>
+      <div class="cover-vertical">Vertical: Dynamic Branding</div>
     </div>
-    <div class="editor-tabs">
-      <div class="editor-tab active" onclick="switchTab('proyectos')">Proyectos</div>
-      <div class="editor-tab" onclick="switchTab('facturacion')">Facturación</div>
-      <div class="editor-tab" onclick="switchTab('kpis')">KPIs</div>
-      <div class="editor-tab" onclick="switchTab('problemas')">Problemas</div>
-      <div class="editor-tab" onclick="switchTab('peticiones')">Peticiones</div>
-      <div class="editor-tab" onclick="switchTab('general')">General</div>
-    </div>
-    <div class="editor-body">
-
-      <!-- GENERAL -->
-      <div class="editor-section" id="tab-general">
-        <div class="editor-row">
-          <div class="field-group full">
-            <div><label>Mes del reporting</label><input type="text" id="g-mes" /></div>
-          </div>
-          <div class="field-group full">
-            <div><label>Subtítulo nav</label><input type="text" id="g-nav" /></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROYECTOS -->
-      <div class="editor-section active" id="tab-proyectos">
-        <div id="proyectos-list"></div>
-        <button class="btn-add-row" onclick="addProyecto()">+ Añadir proyecto</button>
-      </div>
-
-      <!-- FACTURACIÓN -->
-      <div class="editor-section" id="tab-facturacion">
-        <div class="editor-row">
-          <div class="field-group full"><div><label>Mes de facturación</label><input type="text" id="f-mes" /></div></div>
-          <div class="field-group full"><div><label>Importe facturado</label><input type="text" id="f-importe" /></div></div>
-          <div class="field-group full"><div><label>Previsión mes siguiente</label><input type="text" id="f-prevision" placeholder="Dejar vacío si no hay dato" /></div></div>
-        </div>
-      </div>
-
-      <!-- KPIs -->
-      <div class="editor-section" id="tab-kpis">
-        <div id="kpis-list"></div>
-      </div>
-
-      <!-- PROBLEMAS -->
-      <div class="editor-section" id="tab-problemas">
-        <div id="problemas-list"></div>
-        <button class="btn-add-row" onclick="addProblema()">+ Añadir problema</button>
-      </div>
-
-      <!-- PETICIONES -->
-      <div class="editor-section" id="tab-peticiones">
-        <div id="peticiones-list"></div>
-        <button class="btn-add-row" onclick="addPeticion()">+ Añadir petición</button>
-      </div>
-
-    </div>
-    <div class="editor-footer">
-      <button class="btn-publish" onclick="publishToGithub()" id="btn-publish">Publicar en GitHub</button>
-      <span class="publish-status" id="publish-status"></span>
-    </div>
+    <div class="cover-footer">Env&#237;o: primer viernes de cada mes</div>
+  </div>
+  <div class="cover-right">
+    <div class="cover-index-label">Contenido</div>
+    <ul class="cover-index-list">
+      <li class="active"><span class="cover-dot active"></span>01 &mdash; Proyectos activos</li>
+      <li><span class="cover-dot"></span>02 &mdash; Facturaci&#243;n y previsi&#243;n</li>
+      <li><span class="cover-dot"></span>02b &mdash; Gr&#225;fico agencia</li>
+      <li><span class="cover-dot"></span>02c &mdash; Gr&#225;fico Dynamic Branding</li>
+      <li><span class="cover-dot"></span>03 &mdash; KPIs clave</li>
+      <li><span class="cover-dot"></span>04 &mdash; Problemas y mejoras</li>
+      <li><span class="cover-dot"></span>05 &mdash; Peticiones y necesidades</li>
+    </ul>
   </div>
 </div>
 
-<script>
-// ══════════════════════════════════════════════════════
-// DATA
-// ══════════════════════════════════════════════════════
-const GITHUB_TOKEN = ["ghp_4p1GNY","SJkTsafhbvTyxaN1YxntqYsq1Wvbyp"].join("");
-const GITHUB_REPO  = "antoniooprado/bbruce-reporting";
-const GITHUB_FILE  = "reporting-junio-2026.html";
+<!-- 01 PROYECTOS -->
+<section class="section section-accent-teal" id="proyectos">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">Proyectos activos y estado</span>
+    <span class="section-sub">Junio 2026 &middot; 11 proyectos activos</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Proyecto</th><th>Cliente</th><th>Estado</th><th>Pr&#243;ximo paso</th><th>Entrega</th></tr></thead>
+      <tbody>
+        <tr><td class="td-project">Kira Ventures &mdash; Papelar&#237;a Corporativa</td><td class="td-client">Kira Ventures</td><td><span class="badge badge-curso"><span class="badge-dot"></span>En curso</span></td><td class="td-next">Entrega inminente</td><td class="td-fecha urgent">19/06/2026</td></tr>
+        <tr><td class="td-project">Kira Ventures &mdash; Firma Mail</td><td class="td-client">Kira Ventures</td><td><span class="badge badge-empezar"><span class="badge-dot"></span>Por empezar</span></td><td class="td-next">Iniciar dise&#241;o</td><td class="td-fecha urgent">26/06/2026</td></tr>
+        <tr><td class="td-project">Hunting &mdash; Black Crown</td><td class="td-client">Black Crown</td><td><span class="badge badge-meeting"><span class="badge-dot"></span>Reuni&#243;n</span></td><td class="td-next meeting">Presentaci&#243;n</td><td class="td-fecha urgent">16/06 &middot; 11:00h</td></tr>
+        <tr><td class="td-project">Frit Ravich &mdash; Obertura Vies / Redise&#241;o Logo</td><td class="td-client">Frit Ravich</td><td><span class="badge badge-terminado"><span class="badge-dot"></span>Stand by</span></td><td class="td-next">Desarrollar logotipo</td><td class="td-fecha">&mdash;</td></tr>
+        <tr><td class="td-project">Kira Ventures &mdash; Website</td><td class="td-client">Kira Ventures</td><td><span class="badge badge-empezar"><span class="badge-dot"></span>Ronda de ajuste</span></td><td class="td-next">Ajustar feedback</td><td class="td-fecha urgent">22/06/2026</td></tr>
+        <tr><td class="td-project">B&#8211;Bruce &mdash; Newsletter Junio (Patagonia)</td><td class="td-client">B&#8211;Bruce</td><td><span class="badge badge-terminado"><span class="badge-dot"></span>Terminado</span></td><td class="td-next">Entregado</td><td class="td-fecha">30/06/2026</td></tr>
+        <tr><td class="td-project">B&#8211;Bruce &mdash; Exploraci&#243;n BBF</td><td class="td-client">B&#8211;Bruce</td><td><span class="badge badge-curso"><span class="badge-dot"></span>En curso</span></td><td class="td-next">Entrega cada viernes</td><td class="td-fecha">Semanal</td></tr>
+        <tr><td class="td-project">C.F. Badalona &mdash; Brand Show / Video Case</td><td class="td-client">C.F. Badalona</td><td><span class="badge badge-empezar"><span class="badge-dot"></span>Por empezar</span></td><td class="td-next">Arrancar producci&#243;n</td><td class="td-fecha">15/07/2026</td></tr>
+        <tr><td class="td-project">B&#8211;Bruce &mdash; Newsletter Julio (Braun)</td><td class="td-client">B&#8211;Bruce</td><td><span class="badge badge-empezar"><span class="badge-dot"></span>Por empezar</span></td><td class="td-next">Iniciar redacci&#243;n y dise&#241;o</td><td class="td-fecha">30/07/2026</td></tr>
+        <tr><td class="td-project">B&#8211;Bruce &mdash; Newsletter Agosto (Recap Q4)</td><td class="td-client">B&#8211;Bruce</td><td><span class="badge badge-empezar"><span class="badge-dot"></span>Por empezar</span></td><td class="td-next">Pendiente de briefing</td><td class="td-fecha">30/08/2026</td></tr>
+        <tr><td class="td-project">B&#8211;Bruce &mdash; Newsletter Sep. (B&#8212;Bruce Stories)</td><td class="td-client">B&#8211;Bruce</td><td><span class="badge badge-empezar"><span class="badge-dot"></span>Por empezar</span></td><td class="td-next">Pendiente de briefing</td><td class="td-fecha">30/09/2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend-row">
+    <span class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Reuni&#243;n marcada</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>En curso</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--purple)"></span>Por empezar</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--mu2)"></span>Terminado</span>
+    <span class="legend-item" style="margin-left:auto;color:var(--coral);font-weight:600;font-size:11px;">&#9679; Fechas urgentes</span>
+  </div>
+</section>
 
-let data = {
-  mes: "Junio 2026",
-  nav: "Junio 2026 · Dynamic Branding",
-  facturacion: { mes: "Mayo 2026", importe: "25.466,84 €", prevision: "" },
-  proyectos: [
-    { name:"Kira Ventures — Papelería Corporativa", client:"Kira Ventures", estado:"curso", next:"Entrega inminente", fecha:"19/06/2026", urgent:true },
-    { name:"Kira Ventures — Firma Mail", client:"Kira Ventures", estado:"empezar", next:"Iniciar diseño", fecha:"26/06/2026", urgent:true },
-    { name:"Hunting — Black Crown", client:"Black Crown", estado:"meeting", next:"Presentación", fecha:"16/06 · 11:00h", urgent:true },
-    { name:"Frit Ravich — Obertura Vies / Rediseño Logo", client:"Frit Ravich", estado:"terminado", next:"Desarrollar logotipo", fecha:"—", urgent:false },
-    { name:"Kira Ventures — Website", client:"Kira Ventures", estado:"empezar", next:"Ajustar feedback", fecha:"22/06/2026", urgent:true },
-    { name:"B–Bruce — Newsletter Junio (Patagonia)", client:"B–Bruce", estado:"terminado", next:"Entregado", fecha:"30/06/2026", urgent:false },
-    { name:"B–Bruce — Exploración BBF", client:"B–Bruce", estado:"curso", next:"Entrega cada viernes", fecha:"Semanal", urgent:false },
-    { name:"C.F. Badalona — Brand Show / Video Case", client:"C.F. Badalona", estado:"empezar", next:"Arrancar producción", fecha:"15/07/2026", urgent:false },
-    { name:"B–Bruce — Newsletter Julio (Braun)", client:"B–Bruce", estado:"empezar", next:"Iniciar redacción y diseño", fecha:"30/07/2026", urgent:false },
-    { name:"B–Bruce — Newsletter Agosto (Recap Q4)", client:"B–Bruce", estado:"empezar", next:"Pendiente de briefing", fecha:"30/08/2026", urgent:false },
-    { name:"B–Bruce — Newsletter Sep. (B—Bruce Stories)", client:"B–Bruce", estado:"empezar", next:"Pendiente de briefing", fecha:"30/09/2026", urgent:false },
-  ],
-  kpis: [
-    { num:"KPI 01", name:"Facturación\nDynamic Branding", value:"25.466 €", note:"Dynamic Branding · Mayo 2026", vs:"+80% vs abril", vsType:"up", def:"Importe neto facturado por Dynamic Branding ese mes. Fuente: Raquel.", obj:"Objetivo: crecimiento mensual positivo", color:"amber" },
-    { num:"KPI 02", name:"Rentabilidad\npor proyecto", value:"— €/h", note:"Pendiente · Mayo 2026", vs:"[ vs mes anterior ]", vsType:"muted", def:"Presupuesto acordado ÷ horas registradas en Holded. Indica el €/hora real por proyecto.", obj:"Objetivo: definir €/hora objetivo en junio", color:"teal" },
-    { num:"KPI 03", name:"Nuevos proyectos\ncaptados", value:"—", note:"Pendiente · Mayo 2026", vs:"[ vs mes anterior ]", vsType:"muted", def:"Número de proyectos nuevos iniciados durante el mes. Indica si la vertical crece en volumen.", obj:"Objetivo: definir baseline en junio", color:"purple" },
-  ],
-  problemas: [
-    { title:"Toma de decisiones", problem:"Hay decisiones que nos afectan directamente y que se toman sin contar con nosotros. Nos gustaría ser parte del proceso, no solo ejecutores del resultado.", mejora:"Establecer un protocolo mínimo: antes de tomar decisiones que afecten a la vertical, consultar al equipo aunque sea brevemente." },
-    { title:"Tiempo para formación", problem:"El ritmo de trabajo no nos deja hueco para aprender ni explorar herramientas nuevas. La IA está transformando nuestro sector y no estamos pudiendo dedicarle el tiempo que merece.", mejora:"Reservar un bloque de tiempo mensual protegido — sin proyectos, sin reuniones — dedicado exclusivamente a formación y exploración de herramientas." },
-    { title:"Timings", problem:"Los plazos son habitualmente muy ajustados. Eso nos obliga a priorizar la velocidad sobre la calidad, cuando debería ser al revés.", mejora:"Revisar el proceso de briefing para detectar antes los proyectos con plazos irreales y negociarlos con el cliente desde el inicio." },
-    { title:"Visión global", problem:"No tenemos una visión clara de lo que ocurre en el resto de la agencia. Trabajamos de forma demasiado aislada y eso nos hace perder contexto y oportunidades de colaboración.", mejora:"Una reunión mensual breve entre verticales, o simplemente un resumen compartido, para saber qué está haciendo el resto de la agencia." },
-    { title:"Rondas de ajustes", problem:"Los proyectos tienden a crecer una vez empezados. El cliente pide cambios, añade cosas, y al final estás entregando el doble de lo presupuestado sin que nadie lo haya aprobado formalmente.", mejora:"Definir y comunicar desde el inicio el número de rondas de revisión incluidas en el presupuesto, y presupuestar cualquier ajuste fuera de ese alcance." },
-    { title:"Interlocutores múltiples", problem:"En algunos proyectos recibimos indicaciones distintas según con quién hablemos. Un mismo encargo puede tener diferentes criterios en función de quién lo transmite, y eso genera confusión, retrabajos y dudas sobre cuál es la dirección real.", mejora:"Definir desde el inicio un único interlocutor por proyecto en el lado del cliente. Toda la comunicación y validación pasa por esa persona." },
-    { title:"Rapidez vs calidad", problem:"El ritmo actual nos lleva a priorizar la velocidad sobre el resultado. Entregamos antes, pero no siempre con el nivel que queremos ni con el que nos diferencia. Si la premisa de la agencia es la excelencia, necesitamos tener claro cuándo aplicarla y cuándo ceder — porque ahora mismo casi siempre cede la calidad.", mejora:"Definir explícitamente qué tipo de agencia queremos ser y trasladarlo a criterios concretos de trabajo: qué proyectos merecen más tiempo, cuáles no, y dónde está el umbral mínimo de calidad que no se negocia." },
-    { title:"Coordinación entre departamentos", problem:"Cuando un proyecto depende de copy o narrativa del departamento de comunicación, no siempre está claro quién entrega qué ni cuándo. Eso genera esperas, malentendidos y a veces bloqueos que afectan a los plazos de branding.", mejora:"Establecer un flujo de trabajo compartido para proyectos interdepartamentales: quién lidera cada fase, qué entrega cada área y en qué momento. Un documento sencillo que todos conozcan antes de arrancar el proyecto." },
-  ],
-  peticiones: [
-    { name:"Tiempo para formación en IA", area:"Dynamic Branding", prioridad:"alta", estado:"Pendiente", accion:"Necesitamos tiempo real y protegido para formarnos en IA — fuera de proyectos activos. Hacerlo dentro de un proyecto compromete su rentabilidad y no garantiza que lo aprendido sea aplicable a ese encargo concreto." },
-  ]
-};
-
-// ══════════════════════════════════════════════════════
-// RENDER
-// ══════════════════════════════════════════════════════
-function badgeHTML(estado) {
-  const map = {
-    meeting: ['badge-meeting','Reunión'],
-    curso:   ['badge-curso','En curso'],
-    empezar: ['badge-empezar','Por empezar'],
-    terminado:['badge-terminado','Terminado'],
-    standby: ['badge-terminado','Stand by'],
-    ajuste:  ['badge-empezar','Ronda de ajuste'],
-  };
-  const [cls, label] = map[estado] || ['badge-terminado', estado];
-  return `<span class="badge ${cls}"><span class="badge-dot"></span>${label}</span>`;
-}
-
-function prioHTML(p) {
-  const map = {
-    alta:  ['var(--coral-bg)','var(--coral)','var(--coral-bd)','Alta'],
-    media: ['var(--amber-bg)','var(--amber)','var(--amber-bd)','Media'],
-    baja:  ['var(--bg2)','var(--mu)','var(--line)','Baja'],
-  };
-  const [bg,fg,bd,label] = map[p] || map.baja;
-  return `<span class="badge" style="background:${bg};color:${fg};border-color:${bd}">${label}</span>`;
-}
-
-function render() {
-  document.getElementById('nav-date').textContent = data.nav;
-  const main = document.getElementById('main-content');
-  main.innerHTML = `
-    <!-- COVER -->
-    <div class="cover">
-      <div class="cover-left">
-        <div>
-          <div class="cover-eyebrow">Dynamic Branding</div>
-          <div class="cover-title">Reporting<br>Mensual</div>
-          <div class="cover-month">${data.mes}</div>
-          <div class="cover-divider"></div>
-          <div class="cover-vertical">Vertical: Dynamic Branding</div>
-        </div>
-        <div class="cover-footer">Envío: primer viernes de cada mes</div>
+<!-- 02 FACTURACION -->
+<section class="section section-accent-amber" id="facturacion">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">Facturaci&#243;n y previsi&#243;n</span>
+    <span class="section-sub">Mayo 2026 &middot; Pr&#243;ximo mes: Junio 2026</span>
+  </div>
+  <div class="section-body">
+    <div class="billing-grid">
+      <div class="billing-card filled">
+        <div class="billing-label">Facturaci&#243;n del mes</div>
+        <div class="billing-sub">Mayo 2026</div>
+        <div class="billing-divider"></div>
+        <div class="billing-value">25.466,84 &#8364;</div>
+        <div class="billing-note">Dynamic Branding &middot; Dato confirmado &middot; Fuente: Raquel</div>
       </div>
-      <div class="cover-right">
-        <div class="cover-index-label">Contenido</div>
-        <ul class="cover-index-list">
-          <li class="active"><span class="cover-dot active"></span>01 — Proyectos activos</li>
-          <li><span class="cover-dot"></span>02 — Facturación y previsión</li>
-          <li><span class="cover-dot"></span>02b — Gráfico agencia</li>
-          <li><span class="cover-dot"></span>02c — Gráfico Dynamic Branding</li>
-          <li><span class="cover-dot"></span>03 — KPIs clave</li>
-          <li><span class="cover-dot"></span>04 — Problemas y mejoras</li>
-          <li><span class="cover-dot"></span>05 — Peticiones y necesidades</li>
-        </ul>
+      <div class="billing-card">
+        <div class="billing-label">Previsi&#243;n mes siguiente</div>
+        <div class="billing-sub">Junio 2026</div>
+        <div class="billing-divider"></div>
+        <div class="billing-value empty">&mdash;</div>
+        <div class="billing-note">Pendiente &middot; Solicitar a Raquel</div>
       </div>
     </div>
+    <div class="billing-alert">Solicitar previsi&#243;n de junio a Raquel antes del primer viernes del mes</div>
+  </div>
+</section>
 
-    <!-- 01 PROYECTOS -->
-    <section class="section section-accent-teal" id="proyectos">
-      <div class="section-header">
-        <span class="section-num">01</span>
-        <span class="section-title">Proyectos activos y estado</span>
-        <span class="section-sub">${data.mes} · ${data.proyectos.length} proyectos activos</span>
+<!-- 02b GRAFICO AGENCIA -->
+<section class="section section-accent-amber" id="grafico-agencia">
+  <div class="section-header">
+    <span class="section-num">02b</span>
+    <span class="section-title">Evoluci&#243;n de facturaci&#243;n 2026</span>
+    <span class="section-sub">Enero &mdash; Diciembre 2026 &middot; Toda la agencia &middot; Barras apiladas por vertical</span>
+  </div>
+  <div class="section-body">
+    <div class="chart-labels-top"><span>&#8592; Ene&ndash;May &nbsp; datos reales</span><span>Jun&ndash;Dic &nbsp; pendiente de datos &#8594;</span></div>
+    <div class="chart-container"><canvas id="chartAgencia"></canvas></div>
+    <div class="chart-legend">
+      <span class="chart-legend-item"><span class="legend-swatch" style="background:#1F7D38"></span>Dynamic Branding</span>
+      <span class="chart-legend-item"><span class="legend-swatch" style="background:#34C7A1"></span>Iconic Packaging</span>
+      <span class="chart-legend-item"><span class="legend-swatch" style="background:#D43470"></span>Creative Content</span>
+      <span class="chart-legend-item"><span class="legend-swatch" style="background:#188FAF"></span>Digital Product</span>
+      <span class="chart-legend-item"><span class="legend-swatch" style="background:#9FD9CC"></span>Social Media</span>
+      <span class="chart-legend-item"><span class="legend-swatch" style="background:#E8E6DF;border:0.5px solid #ccc"></span>Pendiente</span>
+    </div>
+    <div class="chart-strip">
+      <div><div class="strip-label">Total Ene&ndash;May</div><div class="strip-value">723.318 &#8364;</div></div>
+      <div><div class="strip-label">Mejor mes</div><div class="strip-value">May &middot; 194k &#8364;</div></div>
+      <div><div class="strip-label">Media mensual</div><div class="strip-value">144.664 &#8364;</div></div>
+      <div><div class="strip-label">Vertical l&#237;der</div><div class="strip-value">Creative Content</div></div>
+      <div><div class="strip-label">Jun&ndash;Dic</div><div class="strip-value muted">Pendiente</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02c GRAFICO DB -->
+<section class="section section-accent-amber" id="grafico-db">
+  <div class="section-header">
+    <span class="section-num">02c</span>
+    <span class="section-title">Facturaci&#243;n Dynamic Branding 2026</span>
+    <span class="section-sub">Enero &mdash; Diciembre 2026 &middot; A&#241;o natural &middot; Dynamic Branding</span>
+  </div>
+  <div class="section-body">
+    <div class="chart-labels-top"><span>&#8592; Ene&ndash;May &nbsp; datos reales</span><span>Jun&ndash;Dic &nbsp; pendiente de datos &#8594;</span></div>
+    <div class="chart-container"><canvas id="chartDB"></canvas></div>
+    <div class="chart-strip" style="grid-template-columns:repeat(4,1fr)">
+      <div><div class="strip-label">Total Ene&ndash;May</div><div class="strip-value">94.829 &#8364;</div></div>
+      <div><div class="strip-label">Mejor mes</div><div class="strip-value">May &middot; 25.467 &#8364;</div></div>
+      <div><div class="strip-label">Media mensual</div><div class="strip-value">18.966 &#8364;</div></div>
+      <div><div class="strip-label">Jun&ndash;Dic</div><div class="strip-value muted">Pendiente</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 KPIs -->
+<section class="section section-accent-purple" id="kpis">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">KPIs clave de la vertical</span>
+    <span class="section-sub">Junio 2026 &middot; Dynamic Branding</span>
+  </div>
+  <div class="section-body">
+    <div class="kpi-grid">
+      <div class="kpi-card kpi-card-amber">
+        <div class="kpi-num">KPI 01</div>
+        <div class="kpi-name">Facturaci&#243;n<br>Dynamic Branding</div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-value kpi-value-amber">25.466 &#8364;</div>
+        <div class="kpi-note">Dynamic Branding &middot; Mayo 2026</div>
+        <div class="kpi-divider2"></div>
+        <div class="kpi-vs-label">vs mes anterior</div>
+        <div class="kpi-vs kpi-vs-up">+80% vs abril</div>
+        <div class="kpi-divider2"></div>
+        <div class="kpi-def-label">C&#243;mo se mide</div>
+        <div class="kpi-def">Importe neto facturado por Dynamic Branding ese mes. Fuente: Raquel.</div>
+        <div class="kpi-obj kpi-obj-amber">Objetivo: crecimiento mensual positivo</div>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Proyecto</th><th>Cliente</th><th>Estado</th><th>Próximo paso</th><th>Entrega</th></tr></thead>
-          <tbody>
-            ${data.proyectos.map(p => `<tr>
-              <td class="td-project">${p.name}</td>
-              <td class="td-client">${p.client}</td>
-              <td>${badgeHTML(p.estado)}</td>
-              <td class="td-next${p.estado==='meeting'?' meeting':''}">${p.next}</td>
-              <td class="td-fecha${p.urgent?' urgent':''}">${p.fecha}</td>
-            </tr>`).join('')}
-          </tbody>
-        </table>
+      <div class="kpi-card kpi-card-teal">
+        <div class="kpi-num">KPI 02</div>
+        <div class="kpi-name">Rentabilidad<br>por proyecto</div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-value kpi-value-empty">&mdash; &#8364;/h</div>
+        <div class="kpi-note">Pendiente &middot; Mayo 2026</div>
+        <div class="kpi-divider2"></div>
+        <div class="kpi-vs-label">vs mes anterior</div>
+        <div class="kpi-vs kpi-vs-muted">[ vs mes anterior ]</div>
+        <div class="kpi-divider2"></div>
+        <div class="kpi-def-label">C&#243;mo se mide</div>
+        <div class="kpi-def">Presupuesto acordado &#247; horas registradas en Holded. Indica el &#8364;/hora real por proyecto.</div>
+        <div class="kpi-obj kpi-obj-teal">Objetivo: definir &#8364;/hora objetivo en junio</div>
       </div>
-      <div class="legend-row">
-        <span class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Reunión marcada</span>
-        <span class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>En curso</span>
-        <span class="legend-item"><span class="legend-dot" style="background:var(--purple)"></span>Por empezar</span>
-        <span class="legend-item"><span class="legend-dot" style="background:var(--mu2)"></span>Terminado</span>
-        <span class="legend-item" style="margin-left:auto;color:var(--coral);font-weight:600;font-size:11px;">● Fechas urgentes</span>
+      <div class="kpi-card kpi-card-purple">
+        <div class="kpi-num">KPI 03</div>
+        <div class="kpi-name">Nuevos proyectos<br>captados</div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-value kpi-value-empty">&mdash;</div>
+        <div class="kpi-note">Pendiente &middot; Mayo 2026</div>
+        <div class="kpi-divider2"></div>
+        <div class="kpi-vs-label">vs mes anterior</div>
+        <div class="kpi-vs kpi-vs-muted">[ vs mes anterior ]</div>
+        <div class="kpi-divider2"></div>
+        <div class="kpi-def-label">C&#243;mo se mide</div>
+        <div class="kpi-def">N&#250;mero de proyectos nuevos iniciados durante el mes. Indica si la vertical crece en volumen.</div>
+        <div class="kpi-obj kpi-obj-purple">Objetivo: definir baseline en junio</div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- 02 FACTURACIÓN -->
-    <section class="section section-accent-amber" id="facturacion">
-      <div class="section-header">
-        <span class="section-num">02</span>
-        <span class="section-title">Facturación y previsión</span>
-        <span class="section-sub">${data.facturacion.mes} · Próximo mes: ${data.mes}</span>
-      </div>
-      <div class="section-body">
-        <div class="billing-grid">
-          <div class="billing-card filled">
-            <div class="billing-label">Facturación del mes</div>
-            <div class="billing-sub">${data.facturacion.mes}</div>
-            <div class="billing-divider"></div>
-            <div class="billing-value">${data.facturacion.importe}</div>
-            <div class="billing-note">Dynamic Branding · Dato confirmado · Fuente: Raquel</div>
-          </div>
-          <div class="billing-card">
-            <div class="billing-label">Previsión mes siguiente</div>
-            <div class="billing-sub">${data.mes}</div>
-            <div class="billing-divider"></div>
-            <div class="billing-value${data.facturacion.prevision?'':' empty'}">${data.facturacion.prevision||'—'}</div>
-            <div class="billing-note">Pendiente · Solicitar a Raquel</div>
-          </div>
-        </div>
-        <div class="billing-alert">Solicitar previsión a Raquel antes del primer viernes del mes</div>
-      </div>
-    </section>
+<!-- 04 PROBLEMAS -->
+<section class="section section-accent-coral" id="problemas">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">Problemas y puntos de mejora</span>
+    <span class="section-sub">Junio 2026 &middot; Dynamic Branding</span>
+  </div>
+  <div class="section-body">
+    <div class="problems-grid" id="problems-grid"></div>
+  </div>
+</section>
 
-    <!-- 02b GRÁFICO AGENCIA -->
-    <section class="section section-accent-amber" id="grafico-agencia">
-      <div class="section-header">
-        <span class="section-num">02b</span>
-        <span class="section-title">Evolución de facturación 2026</span>
-        <span class="section-sub">Enero — Diciembre 2026 · Toda la agencia · Barras apiladas por vertical</span>
-      </div>
-      <div class="section-body">
-        <div class="chart-labels-top"><span>← Ene–May &nbsp; datos reales</span><span>Jun–Dic &nbsp; pendiente de datos →</span></div>
-        <div class="chart-container"><canvas id="chartAgencia"></canvas></div>
-        <div class="chart-legend">
-          <span class="chart-legend-item"><span class="legend-swatch" style="background:#1F7D38"></span>Dynamic Branding</span>
-          <span class="chart-legend-item"><span class="legend-swatch" style="background:#34C7A1"></span>Iconic Packaging</span>
-          <span class="chart-legend-item"><span class="legend-swatch" style="background:#D43470"></span>Creative Content</span>
-          <span class="chart-legend-item"><span class="legend-swatch" style="background:#188FAF"></span>Digital Product</span>
-          <span class="chart-legend-item"><span class="legend-swatch" style="background:#9FD9CC"></span>Social Media</span>
-          <span class="chart-legend-item"><span class="legend-swatch" style="background:#E8E6DF;border:0.5px solid #ccc"></span>Pendiente</span>
-        </div>
-        <div class="chart-strip">
-          <div><div class="strip-label">Total Ene–May</div><div class="strip-value">723.318 €</div></div>
-          <div><div class="strip-label">Mejor mes</div><div class="strip-value">May · 194k €</div></div>
-          <div><div class="strip-label">Media mensual</div><div class="strip-value">144.664 €</div></div>
-          <div><div class="strip-label">Vertical líder</div><div class="strip-value">Creative Content</div></div>
-          <div><div class="strip-label">Jun–Dic</div><div class="strip-value muted">Pendiente</div></div>
-        </div>
-      </div>
-    </section>
+<!-- 05 PETICIONES -->
+<section class="section section-accent-purple" id="peticiones">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">Peticiones y necesidades no cubiertas</span>
+    <span class="section-sub">Recursos, herramientas, soporte o decisiones pendientes &middot; Junio 2026</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Petici&#243;n / Necesidad</th><th>&#193;rea afectada</th><th>Prioridad</th><th>Estado</th><th>Acci&#243;n requerida</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-project">Tiempo para formaci&#243;n en IA</td>
+          <td class="td-client">Dynamic Branding</td>
+          <td><span class="badge" style="background:var(--coral-bg);color:var(--coral);border-color:var(--coral-bd)">Alta</span></td>
+          <td><span class="badge badge-terminado">Pendiente</span></td>
+          <td class="td-next">Necesitamos tiempo real y protegido para formarnos en IA, fuera de proyectos activos. Hacerlo dentro de un proyecto compromete su rentabilidad.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend-row"><span style="font-size:12px;color:var(--mu2)">* Actualizar estado en cada reporting mensual</span></div>
+</section>
 
-    <!-- 02c GRÁFICO DB -->
-    <section class="section section-accent-amber" id="grafico-db">
-      <div class="section-header">
-        <span class="section-num">02c</span>
-        <span class="section-title">Facturación Dynamic Branding 2026</span>
-        <span class="section-sub">Enero — Diciembre 2026 · Año natural · Dynamic Branding</span>
-      </div>
-      <div class="section-body">
-        <div class="chart-labels-top"><span>← Ene–May &nbsp; datos reales</span><span>Jun–Dic &nbsp; pendiente de datos →</span></div>
-        <div class="chart-container"><canvas id="chartDB"></canvas></div>
-        <div class="chart-strip" style="grid-template-columns:repeat(4,1fr)">
-          <div><div class="strip-label">Total Ene–May</div><div class="strip-value">94.829 €</div></div>
-          <div><div class="strip-label">Mejor mes</div><div class="strip-value">May · 25.467 €</div></div>
-          <div><div class="strip-label">Media mensual</div><div class="strip-value">18.966 €</div></div>
-          <div><div class="strip-label">Jun–Dic</div><div class="strip-value muted">Pendiente</div></div>
-        </div>
-      </div>
-    </section>
+<footer>Dynamic Branding &middot; Reporting Mensual &middot; Envi&#243;: primer viernes de cada mes &middot; Datos de facturaci&#243;n: Raquel</footer>
+</main>
 
-    <!-- 03 KPIs -->
-    <section class="section section-accent-purple" id="kpis">
-      <div class="section-header">
-        <span class="section-num">03</span>
-        <span class="section-title">KPIs clave de la vertical</span>
-        <span class="section-sub">${data.mes} · Dynamic Branding</span>
-      </div>
-      <div class="section-body">
-        <div class="kpi-grid">
-          ${data.kpis.map(k => `
-          <div class="kpi-card kpi-card-${k.color}">
-            <div class="kpi-num">${k.num}</div>
-            <div class="kpi-name">${k.name.replace(/\n/g,'<br>')}</div>
-            <div class="kpi-divider"></div>
-            <div class="kpi-value kpi-value-${k.value==='—'||k.value.startsWith('—')?'empty':k.color}">${k.value}</div>
-            <div class="kpi-note">${k.note}</div>
-            <div class="kpi-divider2"></div>
-            <div class="kpi-vs-label">vs mes anterior</div>
-            <div class="kpi-vs kpi-vs-${k.vsType}">${k.vs}</div>
-            <div class="kpi-divider2"></div>
-            <div class="kpi-def-label">Cómo se mide</div>
-            <div class="kpi-def">${k.def}</div>
-            <div class="kpi-obj kpi-obj-${k.color}">${k.obj}</div>
-          </div>`).join('')}
-        </div>
-      </div>
-    </section>
+<script>
+const problems = [
+  { n:1, title:"Toma de decisiones", prob:"Hay decisiones que nos afectan directamente y que se toman sin contar con nosotros. Nos gustar&#237;a ser parte del proceso, no solo ejecutores del resultado.", sol:"Establecer un protocolo m&#237;nimo: antes de tomar decisiones que afecten a la vertical, consultar al equipo aunque sea brevemente." },
+  { n:2, title:"Tiempo para formaci&#243;n", prob:"El ritmo de trabajo no nos deja hueco para aprender ni explorar herramientas nuevas. La IA est&#225; transformando nuestro sector y no estamos pudiendo dedicarle el tiempo que merece.", sol:"Reservar un bloque de tiempo mensual protegido, sin proyectos ni reuniones, dedicado exclusivamente a formaci&#243;n y exploraci&#243;n de herramientas." },
+  { n:3, title:"Timings", prob:"Los plazos son habitualmente muy ajustados. Eso nos obliga a priorizar la velocidad sobre la calidad, cuando deber&#237;a ser al rev&#233;s.", sol:"Revisar el proceso de briefing para detectar antes los proyectos con plazos irreales y negociarlos con el cliente desde el inicio." },
+  { n:4, title:"Visi&#243;n global", prob:"No tenemos una visi&#243;n clara de lo que ocurre en el resto de la agencia. Trabajamos de forma demasiado aislada y eso nos hace perder contexto y oportunidades de colaboraci&#243;n.", sol:"Una reuni&#243;n mensual breve entre verticales, o simplemente un resumen compartido, para saber qu&#233; est&#225; haciendo el resto de la agencia." },
+  { n:5, title:"Rondas de ajustes", prob:"Los proyectos tienden a crecer una vez empezados. El cliente pide cambios, a&#241;ade cosas, y al final est&#225;s entregando el doble de lo presupuestado sin que nadie lo haya aprobado formalmente.", sol:"Definir y comunicar desde el inicio el n&#250;mero de rondas de revisi&#243;n incluidas en el presupuesto, y presupuestar cualquier ajuste fuera de ese alcance." },
+  { n:6, title:"Interlocutores m&#250;ltiples", prob:"En algunos proyectos recibimos indicaciones distintas seg&#250;n con qui&#233;n hablemos. Un mismo encargo puede tener diferentes criterios en funci&#243;n de qui&#233;n lo transmite.", sol:"Definir desde el inicio un &#250;nico interlocutor por proyecto en el lado del cliente. Toda la comunicaci&#243;n y validaci&#243;n pasa por esa persona." },
+  { n:7, title:"Rapidez vs calidad", prob:"El ritmo actual nos lleva a priorizar la velocidad sobre el resultado. Entregamos antes, pero no siempre con el nivel que queremos ni con el que nos diferencia.", sol:"Definir expl&#237;citamente qu&#233; tipo de agencia queremos ser y trasladarlo a criterios concretos de trabajo: qu&#233; proyectos merecen m&#225;s tiempo y cu&#225;les no." },
+  { n:8, title:"Coordinaci&#243;n entre departamentos", prob:"Cuando un proyecto depende de copy o narrativa del departamento de comunicaci&#243;n, no siempre est&#225; claro qui&#233;n entrega qu&#233; ni cu&#225;ndo.", sol:"Establecer un flujo de trabajo compartido para proyectos interdepartamentales: qui&#233;n lidera cada fase, qu&#233; entrega cada &#225;rea y en qu&#233; momento." },
+];
 
-    <!-- 04 PROBLEMAS -->
-    <section class="section section-accent-coral" id="problemas">
-      <div class="section-header">
-        <span class="section-num">04</span>
-        <span class="section-title">Problemas y puntos de mejora</span>
-        <span class="section-sub">${data.mes} · Dynamic Branding</span>
-      </div>
-      <div class="section-body">
-        <div class="problems-grid">
-          ${data.problemas.map((p,i) => `
-          <div class="problem-card">
-            <div class="problem-num">${i+1}</div>
-            <div class="problem-title">${p.title}</div>
-            <div class="problem-divider"></div>
-            <div class="problem-text-label">Problema</div>
-            <div class="problem-text">${p.problem}</div>
-            <span class="problem-mejora-badge">Mejora propuesta</span>
-            <div class="problem-mejora">${p.mejora}</div>
-          </div>`).join('')}
-        </div>
-      </div>
-    </section>
+const grid = document.getElementById('problems-grid');
+grid.innerHTML = problems.map(p => `
+  <div class="problem-card">
+    <div class="problem-num">${p.n}</div>
+    <div class="problem-title">${p.title}</div>
+    <div class="problem-divider"></div>
+    <div class="problem-text-label">Problema</div>
+    <div class="problem-text">${p.prob}</div>
+    <span class="problem-mejora-badge">Mejora propuesta</span>
+    <div class="problem-mejora">${p.sol}</div>
+  </div>`).join('');
 
-    <!-- 05 PETICIONES -->
-    <section class="section section-accent-purple" id="peticiones">
-      <div class="section-header">
-        <span class="section-num">05</span>
-        <span class="section-title">Peticiones y necesidades no cubiertas</span>
-        <span class="section-sub">Recursos, herramientas, soporte o decisiones pendientes de dirección · ${data.mes}</span>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Petición / Necesidad</th><th>Área afectada</th><th>Prioridad</th><th>Estado</th><th>Acción requerida</th></tr></thead>
-          <tbody>
-            ${data.peticiones.map(p => `<tr>
-              <td class="td-project">${p.name}</td>
-              <td class="td-client">${p.area}</td>
-              <td>${prioHTML(p.prioridad)}</td>
-              <td><span class="badge badge-terminado">${p.estado}</span></td>
-              <td class="td-next">${p.accion}</td>
-            </tr>`).join('')}
-          </tbody>
-        </table>
-      </div>
-      <div class="legend-row"><span style="font-size:12px;color:var(--mu2)">* Actualizar estado en cada reporting mensual</span></div>
-    </section>
+// Charts
+const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const FM = 5;
 
-    <footer>Dynamic Branding &nbsp;·&nbsp; Reporting Mensual &nbsp;·&nbsp; Envío: primer viernes de cada mes &nbsp;·&nbsp; Datos de facturación: Raquel</footer>
-  `;
-  initCharts();
-  initNavObserver();
-}
-
-// ══════════════════════════════════════════════════════
-// CHARTS
-// ══════════════════════════════════════════════════════
-function initCharts() {
-  const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  const FM = 5;
-  const pending220 = Array(12).fill(null).map((_,i)=>i>=FM?220000:null);
-  const pending30  = Array(12).fill(null).map((_,i)=>i>=FM?30000:null);
-
-  const pluginTotals = {
-    id:'totals',
-    afterDatasetsDraw(chart){
-      const {ctx}=chart;
-      const totals=[126180,108744,133308,161583,193503];
-      ctx.save();ctx.font='600 11px sans-serif';ctx.fillStyle='#444';ctx.textAlign='center';ctx.textBaseline='bottom';
-      const meta=chart.getDatasetMeta(chart.data.datasets.findIndex(d=>d.label==='Social Media'));
-      meta.data.forEach((bar,i)=>{if(i<FM)ctx.fillText(Math.round(totals[i]/1000)+'k',bar.x,bar.y-4);});
-      ctx.restore();
-    }
-  };
-  const pluginSeg = {
-    id:'seg',
-    afterDatasetsDraw(chart){
-      const {ctx}=chart;ctx.save();ctx.font='600 10px sans-serif';ctx.fillStyle='rgba(255,255,255,.92)';ctx.textAlign='center';ctx.textBaseline='middle';
-      chart.data.datasets.forEach((ds,di)=>{
-        if(ds.label==='Pendiente')return;
-        const meta=chart.getDatasetMeta(di);
-        meta.data.forEach((bar,i)=>{
-          if(i>=FM)return;const val=ds.data[i];if(!val||val<8000)return;
-          const bh=bar.height;if(bh<22)return;
-          ctx.fillText(Math.round(val/1000)+'k',bar.x,bar.y+bh/2);
-        });
-      });ctx.restore();
-    }
-  };
-
-  if(window._chartAgencia){window._chartAgencia.destroy();}
-  window._chartAgencia = new Chart(document.getElementById('chartAgencia'),{
-    type:'bar', plugins:[pluginTotals,pluginSeg],
-    data:{labels:months,datasets:[
-      {label:'Dynamic Branding',data:[24170,10889,20132,14172,25467,null,null,null,null,null,null,null],backgroundColor:'#1F7D38',stack:'s'},
-      {label:'Iconic Packaging', data:[22490,35017,17921,24380,76945,null,null,null,null,null,null,null],backgroundColor:'#34C7A1',stack:'s'},
-      {label:'Creative Content', data:[64914,53792,75582,109554,77814,null,null,null,null,null,null,null],backgroundColor:'#D43470',stack:'s'},
-      {label:'Digital Product',  data:[10057, 8297,18923,11376, 9726,null,null,null,null,null,null,null],backgroundColor:'#188FAF',stack:'s'},
-      {label:'Social Media',     data:[ 4550,  750,  750, 2100, 3550,null,null,null,null,null,null,null],backgroundColor:'#9FD9CC',stack:'s'},
-      {label:'Pendiente',        data:pending220,backgroundColor:'#E8E6DF',stack:'s'},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label(ctx){if(ctx.dataset.label==='Pendiente')return null;const v=ctx.raw;return v?ctx.dataset.label+': '+v.toLocaleString('es-ES')+' €':null;}}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:0}},y:{max:230000,ticks:{callback:v=>Math.round(v/1000)+'k €'},grid:{color:'rgba(0,0,0,.05)'}}}}
-  });
-
-  if(window._chartDB){window._chartDB.destroy();}
-  window._chartDB = new Chart(document.getElementById('chartDB'),{
-    type:'bar',
-    data:{labels:months,datasets:[
-      {label:'Dynamic Branding',data:[24170,10889,20132,14172,25467,null,null,null,null,null,null,null],backgroundColor:'#FAC775',borderRadius:3,stack:'s'},
-      {label:'Pendiente',data:pending30,backgroundColor:'#E8E6DF',borderRadius:3,stack:'s'},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label(ctx){if(ctx.dataset.label==='Pendiente')return null;const v=ctx.raw;return v?v.toLocaleString('es-ES')+' €':null;}}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:0}},y:{max:32000,ticks:{callback:v=>Math.round(v/1000)+'k €'},grid:{color:'rgba(0,0,0,.05)'}}}}
-  });
-}
-
-function initNavObserver(){
-  const sections=document.querySelectorAll('section[id]');
-  const links=document.querySelectorAll('.nav-links a');
-  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});},{threshold:.3});
-  sections.forEach(s=>obs.observe(s));
-}
-
-// ══════════════════════════════════════════════════════
-// EDITOR
-// ══════════════════════════════════════════════════════
-function openEditor(){
-  populateEditor();
-  document.getElementById('editor-overlay').classList.add('open');
-}
-function closeEditor(){document.getElementById('editor-overlay').classList.remove('open');}
-function handleOverlayClick(e){if(e.target===document.getElementById('editor-overlay'))closeEditor();}
-function switchTab(name){
-  document.querySelectorAll('.editor-tab').forEach((t,i)=>{
-    const tabs=['proyectos','facturacion','kpis','problemas','peticiones','general'];
-    t.classList.toggle('active',tabs[i]===name);
-  });
-  document.querySelectorAll('.editor-section').forEach(s=>s.classList.remove('active'));
-  document.getElementById('tab-'+name).classList.add('active');
-}
-
-function populateEditor(){
-  // General
-  document.getElementById('g-mes').value=data.mes;
-  document.getElementById('g-nav').value=data.nav;
-  // Facturación
-  document.getElementById('f-mes').value=data.facturacion.mes;
-  document.getElementById('f-importe').value=data.facturacion.importe;
-  document.getElementById('f-prevision').value=data.facturacion.prevision||'';
-  // Proyectos
-  renderEditorProyectos();
-  // KPIs
-  renderEditorKpis();
-  // Problemas
-  renderEditorProblemas();
-  // Peticiones
-  renderEditorPeticiones();
-}
-
-function renderEditorProyectos(){
-  const list=document.getElementById('proyectos-list');
-  list.innerHTML=data.proyectos.map((p,i)=>`
-    <div class="editor-row" id="proy-${i}">
-      <div class="editor-row-header">
-        <span class="editor-row-title">${p.name||'Proyecto '+(i+1)}</span>
-        <button class="btn-delete-row" onclick="deleteProyecto(${i})">✕</button>
-      </div>
-      <div class="field-group full"><div><label>Nombre del proyecto</label><input type="text" value="${p.name}" onchange="data.proyectos[${i}].name=this.value;renderEditorProyectos()" /></div></div>
-      <div class="field-group">
-        <div><label>Cliente</label><input type="text" value="${p.client}" onchange="data.proyectos[${i}].client=this.value" /></div>
-        <div><label>Estado</label>
-          <select onchange="data.proyectos[${i}].estado=this.value">
-            ${['meeting','curso','empezar','terminado','standby','ajuste'].map(s=>`<option value="${s}"${p.estado===s?' selected':''}>${s}</option>`).join('')}
-          </select>
-        </div>
-      </div>
-      <div class="field-group">
-        <div><label>Próximo paso</label><input type="text" value="${p.next}" onchange="data.proyectos[${i}].next=this.value" /></div>
-        <div><label>Fecha entrega</label><input type="text" value="${p.fecha}" onchange="data.proyectos[${i}].fecha=this.value" /></div>
-      </div>
-      <div class="field-group">
-        <div><label>¿Fecha urgente?</label>
-          <select onchange="data.proyectos[${i}].urgent=this.value==='true'">
-            <option value="true"${p.urgent?' selected':''}>Sí</option>
-            <option value="false"${!p.urgent?' selected':''}>No</option>
-          </select>
-        </div>
-      </div>
-    </div>`).join('');
-}
-
-function addProyecto(){
-  data.proyectos.push({name:'Nuevo proyecto',client:'',estado:'empezar',next:'',fecha:'',urgent:false});
-  renderEditorProyectos();
-}
-function deleteProyecto(i){data.proyectos.splice(i,1);renderEditorProyectos();}
-
-function renderEditorKpis(){
-  const list=document.getElementById('kpis-list');
-  list.innerHTML=data.kpis.map((k,i)=>`
-    <div class="editor-row">
-      <div class="editor-row-header"><span class="editor-row-title">${k.num}</span></div>
-      <div class="field-group full"><div><label>Nombre</label><input type="text" value="${k.name}" onchange="data.kpis[${i}].name=this.value" /></div></div>
-      <div class="field-group">
-        <div><label>Valor</label><input type="text" value="${k.value}" onchange="data.kpis[${i}].value=this.value" /></div>
-        <div><label>Nota</label><input type="text" value="${k.note}" onchange="data.kpis[${i}].note=this.value" /></div>
-      </div>
-      <div class="field-group">
-        <div><label>vs mes anterior</label><input type="text" value="${k.vs}" onchange="data.kpis[${i}].vs=this.value" /></div>
-        <div><label>Tendencia</label>
-          <select onchange="data.kpis[${i}].vsType=this.value">
-            <option value="up"${k.vsType==='up'?' selected':''}>↑ Positiva</option>
-            <option value="down"${k.vsType==='down'?' selected':''}>↓ Negativa</option>
-            <option value="muted"${k.vsType==='muted'?' selected':''}>— Sin dato</option>
-          </select>
-        </div>
-      </div>
-      <div class="field-group full"><div><label>Definición</label><textarea onchange="data.kpis[${i}].def=this.value">${k.def}</textarea></div></div>
-      <div class="field-group full"><div><label>Objetivo</label><input type="text" value="${k.obj}" onchange="data.kpis[${i}].obj=this.value" /></div></div>
-    </div>`).join('');
-}
-
-function renderEditorProblemas(){
-  const list=document.getElementById('problemas-list');
-  list.innerHTML=data.problemas.map((p,i)=>`
-    <div class="editor-row">
-      <div class="editor-row-header">
-        <span class="editor-row-title">${p.title||'Problema '+(i+1)}</span>
-        <button class="btn-delete-row" onclick="deleteProblema(${i})">✕</button>
-      </div>
-      <div class="field-group full"><div><label>Título</label><input type="text" value="${p.title}" onchange="data.problemas[${i}].title=this.value;renderEditorProblemas()" /></div></div>
-      <div class="field-group full"><div><label>Descripción del problema</label><textarea onchange="data.problemas[${i}].problem=this.value">${p.problem}</textarea></div></div>
-      <div class="field-group full"><div><label>Mejora propuesta</label><textarea onchange="data.problemas[${i}].mejora=this.value">${p.mejora}</textarea></div></div>
-    </div>`).join('');
-}
-
-function addProblema(){
-  data.problemas.push({title:'Nuevo problema',problem:'',mejora:''});
-  renderEditorProblemas();
-}
-function deleteProblema(i){data.problemas.splice(i,1);renderEditorProblemas();}
-
-function renderEditorPeticiones(){
-  const list=document.getElementById('peticiones-list');
-  list.innerHTML=data.peticiones.map((p,i)=>`
-    <div class="editor-row">
-      <div class="editor-row-header">
-        <span class="editor-row-title">${p.name||'Petición '+(i+1)}</span>
-        <button class="btn-delete-row" onclick="deletePeticion(${i})">✕</button>
-      </div>
-      <div class="field-group full"><div><label>Petición / Necesidad</label><input type="text" value="${p.name}" onchange="data.peticiones[${i}].name=this.value;renderEditorPeticiones()" /></div></div>
-      <div class="field-group">
-        <div><label>Área afectada</label><input type="text" value="${p.area}" onchange="data.peticiones[${i}].area=this.value" /></div>
-        <div><label>Prioridad</label>
-          <select onchange="data.peticiones[${i}].prioridad=this.value">
-            <option value="alta"${p.prioridad==='alta'?' selected':''}>Alta</option>
-            <option value="media"${p.prioridad==='media'?' selected':''}>Media</option>
-            <option value="baja"${p.prioridad==='baja'?' selected':''}>Baja</option>
-          </select>
-        </div>
-      </div>
-      <div class="field-group">
-        <div><label>Estado</label><input type="text" value="${p.estado}" onchange="data.peticiones[${i}].estado=this.value" /></div>
-      </div>
-      <div class="field-group full"><div><label>Acción requerida</label><textarea onchange="data.peticiones[${i}].accion=this.value">${p.accion}</textarea></div></div>
-    </div>`).join('');
-}
-
-function addPeticion(){
-  data.peticiones.push({name:'Nueva petición',area:'Dynamic Branding',prioridad:'media',estado:'Pendiente',accion:''});
-  renderEditorPeticiones();
-}
-function deletePeticion(i){data.peticiones.splice(i,1);renderEditorPeticiones();}
-
-// ══════════════════════════════════════════════════════
-// SAVE EDITOR & APPLY
-// ══════════════════════════════════════════════════════
-function applyEditorChanges(){
-  data.mes = document.getElementById('g-mes').value;
-  data.nav = document.getElementById('g-nav').value;
-  data.facturacion.mes = document.getElementById('f-mes').value;
-  data.facturacion.importe = document.getElementById('f-importe').value;
-  data.facturacion.prevision = document.getElementById('f-prevision').value;
-}
-
-// ══════════════════════════════════════════════════════
-// PUBLISH TO GITHUB
-// ══════════════════════════════════════════════════════
-async function publishToGithub(){
-  applyEditorChanges();
-  render();
-
-  const btn = document.getElementById('btn-publish');
-  const status = document.getElementById('publish-status');
-  btn.disabled = true;
-  btn.textContent = 'Publicando...';
-  status.textContent = '';
-  status.className = 'publish-status';
-
-  try {
-    // Get current SHA
-    const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
-      headers:{ Authorization: `token ${GITHUB_TOKEN}` }
-    });
-    const getJson = await getRes.json();
-    const sha = getJson.sha;
-
-    // Get current HTML and update data block
-    const currentHTML = document.documentElement.outerHTML;
-    const newDataBlock = `let data = ${JSON.stringify(data, null, 2)};`;
-    const updatedHTML = currentHTML.replace(/let data = \{[\s\S]*?
-\};/, newDataBlock);
-
-    const encoded = btoa(unescape(encodeURIComponent(updatedHTML)));
-
-    const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
-      method: 'PUT',
-      headers:{ Authorization: `token ${GITHUB_TOKEN}`, 'Content-Type':'application/json' },
-      body: JSON.stringify({ message: `Reporting update ${new Date().toLocaleDateString('es-ES')}`, content: encoded, sha })
-    });
-
-    if(putRes.ok){
-      status.textContent = '✓ Publicado correctamente';
-      status.className = 'publish-status success';
-    } else {
-      throw new Error('GitHub error: ' + putRes.status);
-    }
-  } catch(err){
-    status.textContent = '✕ Error: ' + err.message;
-    status.className = 'publish-status error';
+const pluginTotals = {
+  id:'totals',
+  afterDatasetsDraw(chart){
+    const {ctx}=chart;
+    const totals=[126180,108744,133308,161583,193503];
+    ctx.save();ctx.font='600 11px sans-serif';ctx.fillStyle='#444';ctx.textAlign='center';ctx.textBaseline='bottom';
+    const meta=chart.getDatasetMeta(chart.data.datasets.findIndex(d=>d.label==='Social Media'));
+    meta.data.forEach((bar,i)=>{if(i<FM)ctx.fillText(Math.round(totals[i]/1000)+'k',bar.x,bar.y-4);});
+    ctx.restore();
   }
+};
+const pluginSeg = {
+  id:'seg',
+  afterDatasetsDraw(chart){
+    const {ctx}=chart;ctx.save();ctx.font='600 10px sans-serif';ctx.fillStyle='rgba(255,255,255,.92)';ctx.textAlign='center';ctx.textBaseline='middle';
+    chart.data.datasets.forEach((ds,di)=>{
+      if(ds.label==='Pendiente')return;
+      chart.getDatasetMeta(di).data.forEach((bar,i)=>{
+        if(i>=FM)return;const val=ds.data[i];if(!val||val<8000)return;
+        const bh=bar.height;if(bh<22)return;
+        ctx.fillText(Math.round(val/1000)+'k',bar.x,bar.y+bh/2);
+      });
+    });ctx.restore();
+  }
+};
 
-  btn.disabled = false;
-  btn.textContent = 'Publicar en GitHub';
-}
+new Chart(document.getElementById('chartAgencia'),{
+  type:'bar',plugins:[pluginTotals,pluginSeg],
+  data:{labels:months,datasets:[
+    {label:'Dynamic Branding',data:[24170,10889,20132,14172,25467,null,null,null,null,null,null,null],backgroundColor:'#1F7D38',stack:'s'},
+    {label:'Iconic Packaging', data:[22490,35017,17921,24380,76945,null,null,null,null,null,null,null],backgroundColor:'#34C7A1',stack:'s'},
+    {label:'Creative Content', data:[64914,53792,75582,109554,77814,null,null,null,null,null,null,null],backgroundColor:'#D43470',stack:'s'},
+    {label:'Digital Product',  data:[10057, 8297,18923,11376, 9726,null,null,null,null,null,null,null],backgroundColor:'#188FAF',stack:'s'},
+    {label:'Social Media',     data:[ 4550,  750,  750, 2100, 3550,null,null,null,null,null,null,null],backgroundColor:'#9FD9CC',stack:'s'},
+    {label:'Pendiente',        data:Array(12).fill(null).map((_,i)=>i>=FM?220000:null),backgroundColor:'#E8E6DF',stack:'s'},
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label(ctx){if(ctx.dataset.label==='Pendiente')return null;const v=ctx.raw;return v?ctx.dataset.label+': '+v.toLocaleString('es-ES')+' EUR':null;}}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:0}},y:{max:230000,ticks:{callback:v=>Math.round(v/1000)+'k EUR'},grid:{color:'rgba(0,0,0,.05)'}}}}
+});
 
-// ══════════════════════════════════════════════════════
-// INIT
-// ══════════════════════════════════════════════════════
-render();
+new Chart(document.getElementById('chartDB'),{
+  type:'bar',
+  data:{labels:months,datasets:[
+    {label:'Dynamic Branding',data:[24170,10889,20132,14172,25467,null,null,null,null,null,null,null],backgroundColor:'#FAC775',borderRadius:3,stack:'s'},
+    {label:'Pendiente',data:Array(12).fill(null).map((_,i)=>i>=FM?30000:null),backgroundColor:'#E8E6DF',borderRadius:3,stack:'s'},
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label(ctx){if(ctx.dataset.label==='Pendiente')return null;const v=ctx.raw;return v?v.toLocaleString('es-ES')+' EUR':null;}}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:0}},y:{max:32000,ticks:{callback:v=>Math.round(v/1000)+'k EUR'},grid:{color:'rgba(0,0,0,.05)'}}}}
+});
+
+// Nav active
+const sections=document.querySelectorAll('section[id]');
+const links=document.querySelectorAll('.nav-links a');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});},{threshold:.3});
+sections.forEach(s=>obs.observe(s));
 </script>
 </body>
 </html>
